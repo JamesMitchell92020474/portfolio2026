@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="James Mitchell — Front-end developer and graphic designer based in Christchurch, NZ. Bringing work from concept to screen.">
+  <title>James Mitchell — Front-end Developer &amp; Graphic Designer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="main-nav" aria-label="Main navigation">
+    <div class="container">
+      <a href="#hero" class="nav-logo">James Mitchell</a>
+      <ul class="nav-links" role="list">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile nav -->
+  <nav class="nav-mobile" id="nav-mobile" aria-label="Mobile navigation">
+    <a href="#hero">Home</a>
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+
+    <!-- ==============================
+         HERO
+         ============================== -->
+    <section class="hero" id="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero-left">
+          <h1 class="hero-heading" id="hero-heading">
+            I design things<br>and <span class="accent">build</span> them.
+          </h1>
+          <p class="hero-sub">
+            Front-end developer and graphic designer based in Christchurch, NZ. I bring work from concept to screen.
+          </p>
+          <div class="hero-actions">
+            <a href="#work" class="btn btn-primary">View my work</a>
+            <a href="#about" class="btn btn-secondary">About me</a>
+          </div>
+        </div>
+
+        <div class="hero-stats" aria-label="Quick stats">
+          <div class="stat">
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Years in design</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">3+</div>
+            <div class="stat-label">Years in dev</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">NZ</div>
+            <div class="stat-label">Christchurch based</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         WORK
+         ============================== -->
+    <section class="section-work" id="work" aria-labelledby="work-label">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-label" id="work-label">Work</span>
+          <div class="filter-bar" role="group" aria-label="Filter by category">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="web-development">Web Development</button>
+            <button class="filter-btn" data-filter="graphic-design">Graphic Design</button>
+          </div>
+        </div>
+
+        <div class="work-grid" id="work-grid">
+
+          <!-- Card 1 — HomeRow (featured, spans 2 cols) -->
+          <article class="card featured" data-category="web-development">
+            <div class="card-thumbnail featured-thumbnail">
+              <!-- Replace with actual project image -->
+              <span class="featured-url">homerow.jamesmitchell.co.nz</span>
+            </div>
+            <div class="card-body">
+              <span class="card-tag">Web app</span>
+              <h2 class="card-title">HomeRow — Touch Typing Tutor</h2>
+              <p class="card-desc">A full-featured typing tutor with progressive lessons, real-time coaching, achievements, and progress tracking. Built with HTML, CSS and JavaScript.</p>
+            </div>
+          </article>
+
+          <!-- Card 2 — Islam Is -->
+          <article class="card" data-category="web-development">
+            <div class="card-thumbnail" style="background: #1e2e1e;">
+              <!-- Replace with actual project image -->
+            </div>
+            <div class="card-body">
+              <span class="card-tag">Web dev</span>
+              <h2 class="card-title">Islam Is… 4for40</h2>
+              <p class="card-desc">Website and collateral for a Christchurch community outreach programme.</p>
+            </div>
+          </article>
+
+          <!-- Card 3 — Brand identity -->
+          <article class="card" data-category="graphic-design">
+            <div class="card-thumbnail" style="background: #E4E0D8;">
+              <!-- Replace with actual project image -->
+            </div>
+            <div class="card-body">
+              <span class="card-tag">Graphic design</span>
+              <h2 class="card-title">Brand identity — [Client]</h2>
+              <p class="card-desc">Logo, guidelines, and print collateral for a small business rebrand.</p>
+            </div>
+          </article>
+
+          <!-- Card 4 — Print collateral -->
+          <article class="card" data-category="graphic-design">
+            <div class="card-thumbnail" style="background: #c8d8e8;">
+              <!-- Replace with actual project image -->
+            </div>
+            <div class="card-body">
+              <span class="card-tag">Graphic design</span>
+              <h2 class="card-title">Print collateral — [Client]</h2>
+              <p class="card-desc">Brochures, signage, and marketing material for a local business.</p>
+            </div>
+          </article>
+
+          <!-- Card 5 — Placeholder -->
+          <article class="card" data-category="web-development">
+            <div class="card-thumbnail" style="background: #1e2533;">
+              <!-- Replace with actual project image -->
+            </div>
+            <div class="card-body">
+              <span class="card-tag">Web dev</span>
+              <h2 class="card-title">Project — [Coming soon]</h2>
+              <p class="card-desc">Placeholder for an upcoming web development project.</p>
+            </div>
+          </article>
+
+          <!-- Card 6 — Placeholder -->
+          <article class="card" data-category="web-development">
+            <div class="card-thumbnail" style="background: #1a2a20;">
+              <!-- Replace with actual project image -->
+            </div>
+            <div class="card-body">
+              <span class="card-tag">Web dev</span>
+              <h2 class="card-title">Project — [Coming soon]</h2>
+              <p class="card-desc">Placeholder for an upcoming web development project.</p>
+            </div>
+          </article>
+
+          <!-- Card 7 — Placeholder -->
+          <article class="card" data-category="graphic-design">
+            <div class="card-thumbnail" style="background: #ede8e0;">
+              <!-- Replace with actual project image -->
+            </div>
+            <div class="card-body">
+              <span class="card-tag">Graphic design</span>
+              <h2 class="card-title">Project — [Coming soon]</h2>
+              <p class="card-desc">Placeholder for an upcoming graphic design project.</p>
+            </div>
+          </article>
+
+          <!-- Card 8 — Placeholder -->
+          <article class="card" data-category="graphic-design">
+            <div class="card-thumbnail" style="background: #d8e4ec;">
+              <!-- Replace with actual project image -->
+            </div>
+            <div class="card-body">
+              <span class="card-tag">Graphic design</span>
+              <h2 class="card-title">Project — [Coming soon]</h2>
+              <p class="card-desc">Placeholder for an upcoming graphic design project.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         ABOUT
+         ============================== -->
+    <section class="section-about" id="about" aria-labelledby="about-label">
+      <div class="container">
+        <div class="about-grid">
+
+          <!-- Left — bio -->
+          <div class="about-left">
+            <span class="section-label" id="about-label">About</span>
+            <h2 class="about-heading">
+              Design thinking.<br><span class="accent">Development</span> skills.
+            </h2>
+            <p>
+              I started out in graphic design — brand work, print production, and the kind of detail-obsessed discipline that comes with pre-press. Over time I moved into IT systems and administration, which gave me a different lens: how organisations work, how software fits into workflows, and how users actually interact with the things we build. From there, front-end development was a natural step.
+            </p>
+            <p>
+              That combination — design, systems, and code — means I can work across the full width of a project. I understand what a design needs to communicate and I know how to build it. I don't need a handoff to get from a brief to a finished, working page.
+            </p>
+            <p>
+              On the design side I work primarily in Adobe CC across brand identity, print collateral, and pre-press. On the development side I work with HTML, CSS, and JavaScript, with version control via GitHub. I'm currently looking for permanent full-time roles in front-end development, UI/UX, or IT — in Christchurch or remotely.
+            </p>
+            <a href="#" class="btn btn-secondary">Download CV</a>
+          </div>
+
+          <!-- Right — skills + education -->
+          <div class="about-right">
+            <div class="skill-group">
+              <div class="skill-group-label">Development</div>
+              <div class="skill-pills">
+                <span class="skill-pill">HTML / CSS / JS</span>
+                <span class="skill-pill">Front-end dev</span>
+                <span class="skill-pill">UI / UX</span>
+                <span class="skill-pill">GitHub</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <div class="skill-group-label">Design</div>
+              <div class="skill-pills">
+                <span class="skill-pill">Adobe CC</span>
+                <span class="skill-pill">Brand design</span>
+                <span class="skill-pill">Print production</span>
+                <span class="skill-pill">Pre-press</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <div class="skill-group-label">Systems</div>
+              <div class="skill-pills">
+                <span class="skill-pill">Systems admin</span>
+                <span class="skill-pill">CRM integration</span>
+                <span class="skill-pill">User management</span>
+              </div>
+            </div>
+
+            <div class="education">
+              <div class="education-label">Education</div>
+              <ul class="education-list" role="list">
+                <li class="education-item">
+                  <div class="education-qualification">Microcredential in Generative AI</div>
+                  <div class="education-institution">Open Polytechnic, 2025</div>
+                </li>
+                <li class="education-item">
+                  <div class="education-qualification">Diploma of Software Development</div>
+                  <div class="education-institution">Whitecliffe College, 2019–2020</div>
+                </li>
+                <li class="education-item">
+                  <div class="education-qualification">Diploma of Interactive Design</div>
+                  <div class="education-institution">Yoobee, 2013–2014</div>
+                </li>
+                <li class="education-item">
+                  <div class="education-qualification">Diploma of Computer Graphic Design</div>
+                  <div class="education-institution">Natcoll, 2012</div>
+                </li>
+                <li class="education-item">
+                  <div class="education-qualification">Certificate in Design Technology</div>
+                  <div class="education-institution">Natcoll, 2011</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+         CONTACT
+         ============================== -->
+    <section class="section-contact" id="contact" aria-labelledby="contact-label">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- Left — info -->
+          <div class="contact-left">
+            <span class="section-label" id="contact-label">Contact</span>
+            <h2 class="contact-heading">Get in touch.</h2>
+            <p class="contact-text">
+              I'm currently looking for permanent full-time opportunities in front-end development, UI/UX, or IT. If you'd like to talk, fill in the form or reach out directly.
+            </p>
+            <div class="contact-links">
+              <div class="contact-link-item">
+                <span class="contact-link-label">Email</span>
+                <a href="mailto:hello@jamesmitchell.co.nz" class="contact-link">hello@jamesmitchell.co.nz</a>
+              </div>
+              <div class="contact-link-item">
+                <span class="contact-link-label">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/jamesmitchell" class="contact-link" target="_blank" rel="noopener noreferrer">linkedin.com/in/jamesmitchell</a>
+              </div>
+              <div class="contact-link-item">
+                <span class="contact-link-label">GitHub</span>
+                <a href="https://github.com/jamesmitchell" class="contact-link" target="_blank" rel="noopener noreferrer">github.com/jamesmitchell</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right — form -->
+          <div class="contact-right">
+            <p class="form-success" id="form-success" role="status">
+              Thanks — I'll be in touch soon.
+            </p>
+            <p class="form-error" id="form-error" role="alert"></p>
+
+            <!-- IMPORTANT: Replace REPLACE_WITH_YOUR_ID with your Formspree form ID.
+                 Sign up at https://formspree.io to get your ID.
+                 Your action URL will look like: https://formspree.io/f/xabc1234 -->
+            <form
+              class="contact-form"
+              id="contact-form"
+              action="https://formspree.io/f/REPLACE_WITH_YOUR_ID"
+              method="POST"
+              novalidate
+            >
+              <div class="form-group">
+                <label class="form-label" for="name">Name</label>
+                <input class="form-input" type="text" id="name" name="name" autocomplete="name" required placeholder="Your name">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Email</label>
+                <input class="form-input" type="email" id="email" name="email" autocomplete="email" required placeholder="your@email.com">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="message">Message</label>
+                <textarea class="form-textarea" id="message" name="message" rows="5" required placeholder="What would you like to talk about?"></textarea>
+              </div>
+              <div>
+                <button type="submit" class="btn btn-primary">Send message</button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-copy">James Mitchell — Christchurch, NZ</p>
+      <ul class="footer-links" role="list">
+        <li><a href="https://www.linkedin.com/in/jamesmitchell" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="https://github.com/jamesmitchell" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="#contact">Email</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
