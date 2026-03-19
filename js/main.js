@@ -21,9 +21,9 @@
   var overlay = document.querySelector('.nav-overlay');
   if (!hamburger || !overlay) return;
 
-  // Set active link for current page
+  // Set active link for current page (desktop nav + mobile overlay)
   var currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  overlay.querySelectorAll('a').forEach(function (link) {
+  document.querySelectorAll('.nav-links a, .nav-overlay a').forEach(function (link) {
     var href = link.getAttribute('href').split('/').pop();
     if (href === currentPage) {
       link.classList.add('active');
