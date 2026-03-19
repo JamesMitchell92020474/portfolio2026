@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact James Mitchell — Christchurch-based front-end developer and graphic designer, open to permanent full-time roles.">
+  <title>Contact — James Mitchell</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">James Mitchell.</a>
+    <button class="hamburger" aria-label="Open menu">
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile nav overlay -->
+  <div class="nav-overlay" role="dialog" aria-label="Navigation menu">
+    <a href="index.html">Home</a>
+    <a href="work.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <main>
+
+    <div class="contact-layout">
+
+      <!-- Left column -->
+      <div class="contact-left">
+        <div class="label-bar">
+          <div class="label-bar-indicator"></div>
+          <span class="label-bar-text">Contact</span>
+        </div>
+        <h1 class="page-heading">Get in touch.</h1>
+
+        <p>I'm currently looking for permanent full-time opportunities in front-end development, UI/UX, or IT. If you'd like to talk, fill in the form or reach out directly.</p>
+
+        <div class="contact-links">
+          <a href="mailto:hello@jamesmitchell.co.nz">hello@jamesmitchell.co.nz</a>
+          <a href="https://linkedin.com/in/jamesmitchell" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/JamesMitchell92020474" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+
+      <!-- Right column -->
+      <div class="contact-right">
+
+        <p class="form-success">Thanks — I'll be in touch soon.</p>
+
+        <!-- Sign up at formspree.io and replace REPLACE_WITH_YOUR_ID with your form ID -->
+        <form id="contact-form" action="https://formspree.io/f/REPLACE_WITH_YOUR_ID" method="POST">
+
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input class="form-control" type="text" id="name" name="name" required autocomplete="name">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input class="form-control" type="email" id="email" name="email" required autocomplete="email">
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="btn-accent">Send message</button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <a href="https://linkedin.com/in/jamesmitchell" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="https://github.com/JamesMitchell92020474" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="mailto:hello@jamesmitchell.co.nz">Email</a>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

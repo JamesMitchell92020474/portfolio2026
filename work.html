@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="James Mitchell — Christchurch-based front-end developer and graphic designer, crafting considered websites and digital experiences.">
-  <title>James Mitchell — Front-end Developer &amp; Graphic Designer</title>
+  <meta name="description" content="Work — James Mitchell, Christchurch-based front-end developer and graphic designer.">
+  <title>Work — James Mitchell</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -28,21 +28,28 @@
 
   <main>
 
-    <!-- Hero -->
-    <section class="hero">
+    <!-- Page header -->
+    <section class="page-header">
       <div class="label-bar">
         <div class="label-bar-indicator"></div>
-        <span class="label-bar-text">Front-end developer &amp; designer</span>
+        <span class="label-bar-text">Work</span>
       </div>
-      <h1 class="hero-heading">Christchurch-based designer and developer, crafting considered websites and digital experiences.</h1>
+      <h1 class="page-heading">A selection of projects across web development, graphic design, and IT.</h1>
     </section>
+
+    <!-- Filter bar -->
+    <div class="filter-bar" role="group" aria-label="Filter by category">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="web-development">Web Development</button>
+      <button class="filter-btn" data-filter="graphic-design">Graphic Design</button>
+    </div>
 
     <!-- Portfolio grid -->
     <section aria-label="Portfolio">
       <div class="portfolio-grid">
 
-        <!-- Card 1 — HomeRow (standard) -->
-        <article class="card">
+        <!-- Card 1 — HomeRow -->
+        <article class="card" data-category="web-development">
           <div class="card-thumbnail" style="background: #1A1A2E; height: 150px;">
             <!-- Replace with actual project image -->
             <span style="font-size: 10px; color: #00B4FF; font-family: monospace;">homerow.jamesmitchell.co.nz</span>
@@ -53,8 +60,8 @@
           </div>
         </article>
 
-        <!-- Card 2 — Islam Is 4for40 (tall, spans 2 rows) -->
-        <article class="card card-tall">
+        <!-- Card 2 — Islam Is 4for40 (tall) -->
+        <article class="card card-tall" data-category="web-development">
           <div class="card-thumbnail" style="background: #1e2e1e; min-height: 312px;">
             <!-- Replace with actual project image -->
           </div>
@@ -64,8 +71,8 @@
           </div>
         </article>
 
-        <!-- Card 3 — Brand identity (standard) -->
-        <article class="card">
+        <!-- Card 3 — Brand identity -->
+        <article class="card" data-category="graphic-design">
           <div class="card-thumbnail" style="background: #E4E0D8; height: 150px;">
             <!-- Replace with actual project image -->
           </div>
@@ -75,8 +82,8 @@
           </div>
         </article>
 
-        <!-- Card 4 — Print collateral (standard) -->
-        <article class="card">
+        <!-- Card 4 — Print collateral -->
+        <article class="card" data-category="graphic-design">
           <div class="card-thumbnail" style="background: #d8cfc4; height: 150px;">
             <!-- Replace with actual project image -->
           </div>
@@ -86,14 +93,36 @@
           </div>
         </article>
 
-        <!-- Card 5 — WordPress site (standard) -->
-        <article class="card">
+        <!-- Card 5 — WordPress site -->
+        <article class="card" data-category="web-development">
           <div class="card-thumbnail" style="background: #c8d8e8; height: 150px;">
             <!-- Replace with actual project image -->
           </div>
           <div class="card-body">
             <div class="card-tag">Web dev</div>
             <div class="card-title">WordPress site — [Client]</div>
+          </div>
+        </article>
+
+        <!-- Card 6 — Placeholder (web dev) -->
+        <article class="card" data-category="web-development">
+          <div class="card-thumbnail" style="background: #1e2533; height: 150px;">
+            <!-- Replace with actual project image -->
+          </div>
+          <div class="card-body">
+            <div class="card-tag">Web dev</div>
+            <div class="card-title">Project — [Client]</div>
+          </div>
+        </article>
+
+        <!-- Card 7 — Placeholder (graphic design) -->
+        <article class="card" data-category="graphic-design">
+          <div class="card-thumbnail" style="background: #e8e0d4; height: 150px;">
+            <!-- Replace with actual project image -->
+          </div>
+          <div class="card-body">
+            <div class="card-tag">Graphic design</div>
+            <div class="card-title">Design project — [Client]</div>
           </div>
         </article>
 

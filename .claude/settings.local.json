@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh --version)",
+      "Read(//c/Users/4For40/**)",
+      "Bash(echo \"exit:$?\")",
+      "Read(//etc/**)",
+      "Read(//proc/**)",
+      "Bash(echo \"shell:$$ ppid:$PPID\")",
+      "Bash(gh auth:*)"
+    ]
+  }
+}

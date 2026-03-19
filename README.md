@@ -8,7 +8,10 @@ Personal portfolio website for James Mitchell, front-end developer and graphic d
 
 ```
 portfolio2026/
-├── index.html       # Single-page site
+├── index.html       # Homepage — hero + portfolio grid
+├── work.html        # Full project grid with filter
+├── about.html       # Bio, skills, and education
+├── contact.html     # Contact form and direct links
 ├── css/
 │   └── style.css
 ├── js/
@@ -16,12 +19,19 @@ portfolio2026/
 └── images/
 ```
 
-## Sections
+## Pages
 
-- **Hero** — headline, CTA buttons, and quick stats
-- **Work** — filterable project grid (Web Development / Graphic Design)
-- **About** — bio, skills, and education
-- **Contact** — contact form (Formspree) and direct contact links
+- **index.html** — Hero with label bar and 5-card portfolio grid
+- **work.html** — Full portfolio grid, filterable by Web Development / Graphic Design
+- **about.html** — Two-column layout with bio, skill pills, and education
+- **contact.html** — Two-column layout with Formspree contact form
+
+## Design
+
+- Colour palette: `#FAF8F3` background, `#00B4FF` accent, `#222222` headings
+- Typography: system font stack, weight 400–500
+- Content constrained to 1200px max-width
+- Fully responsive — single column below 768px, mobile hamburger nav
 
 ## Setup
 
@@ -33,7 +43,7 @@ npx serve .
 
 ## Contact form
 
-The form uses [Formspree](https://formspree.io). Replace the placeholder in `index.html` with your actual form ID:
+The form uses [Formspree](https://formspree.io). Replace the placeholder in `contact.html` with your actual form ID:
 
 ```html
 action="https://formspree.io/f/REPLACE_WITH_YOUR_ID"
@@ -41,7 +51,7 @@ action="https://formspree.io/f/REPLACE_WITH_YOUR_ID"
 
 ## To do
 
-- [ ] Replace placeholder project cards with real project images and details
-- [ ] Add CV download link
+- [ ] Replace placeholder project thumbnails with real images
+- [ ] Add CV file and wire up Download CV button
 - [ ] Set up Formspree form ID
 - [ ] Deploy
