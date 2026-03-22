@@ -8,24 +8,34 @@ Personal portfolio website for James Mitchell, front-end developer and graphic d
 
 ```
 portfolio2026/
-├── index.html           # Homepage — hero + portfolio grid
-├── about.html           # Bio, skills, and education
-├── contact.html         # Contact form and direct links
+├── index.html                    # Homepage — hero + 3×3 portfolio grid
+├── about.html                    # Bio, skills, and education
+├── contact.html                  # Contact form and direct links
 ├── projects/
-│   ├── homerow.html
-│   ├── 4for40.html
-│   ├── tidal.html
-│   ├── meridian.html
-│   ├── harbour-run.html
-│   ├── pohutukawa.html
-│   ├── stackwise.html
-│   └── relay.html
+│   ├── homerow.html              # HomeRow — Touch Typing Tutor
+│   ├── 4for40.html               # Islam Is… 4for40
+│   ├── asqs.html                 # Asset Sure Quantity Surveyors
+│   ├── community-brochures.html  # Christchurch City Council — Community Brochures
+│   ├── cuppa-joes.html           # Cuppa Joe's
+│   ├── greenworld.html           # Greenworld
+│   ├── pwm-law.html              # Peter Mitchell Law
+│   ├── step-up.html              # E3 Business Accountants — Step Up
+│   └── placeholder.html          # Placeholder for upcoming project
 ├── css/
 │   └── style.css
 ├── js/
 │   └── main.js
 └── images/
 ```
+
+## Features
+
+- 3×3 portfolio grid on homepage
+- Individual project pages with hero image, description, meta, and image gallery
+- Lightbox image viewer with prev/next navigation and keyboard support (← → Esc)
+- Sticky nav with scroll shadow
+- Mobile hamburger nav overlay
+- Contact form via Formspree
 
 ## Design
 
@@ -52,7 +62,8 @@ action="https://formspree.io/f/REPLACE_WITH_YOUR_ID"
 
 ## To do
 
-- [ ] Replace placeholder project images with real ones
+- [ ] Add real images and content for 4for40 project page
 - [ ] Add CV file and wire up Download CV button
 - [ ] Set up Formspree form ID
+- [ ] Fill placeholder (9th) project slot
 - [ ] Deploy

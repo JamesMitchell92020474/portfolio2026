@@ -76,6 +76,82 @@
 }());
 
 // ================================
+// LIGHTBOX
+// ================================
+(function () {
+  var images = Array.from(document.querySelectorAll('.project-hero img, .project-gallery img'));
+  if (!images.length) return;
+
+  var current = 0;
+
+  // Build overlay
+  var overlay = document.createElement('div');
+  overlay.className = 'lightbox';
+  overlay.setAttribute('role', 'dialog');
+  overlay.setAttribute('aria-modal', 'true');
+  overlay.setAttribute('aria-label', 'Image viewer');
+
+  var img = document.createElement('img');
+  img.className = 'lightbox-img';
+
+  var btnClose = document.createElement('button');
+  btnClose.className = 'lightbox-btn lightbox-close';
+  btnClose.setAttribute('aria-label', 'Close');
+  btnClose.innerHTML = '&times;';
+
+  var btnPrev = document.createElement('button');
+  btnPrev.className = 'lightbox-btn lightbox-prev';
+  btnPrev.setAttribute('aria-label', 'Previous image');
+  btnPrev.innerHTML = '&#8592;';
+
+  var btnNext = document.createElement('button');
+  btnNext.className = 'lightbox-btn lightbox-next';
+  btnNext.setAttribute('aria-label', 'Next image');
+  btnNext.innerHTML = '&#8594;';
+
+  overlay.appendChild(img);
+  overlay.appendChild(btnClose);
+  if (images.length > 1) {
+    overlay.appendChild(btnPrev);
+    overlay.appendChild(btnNext);
+  }
+  document.body.appendChild(overlay);
+
+  function show(index) {
+    current = (index + images.length) % images.length;
+    img.src = images[current].src;
+    img.alt = images[current].alt;
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function close() {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  images.forEach(function (image, i) {
+    image.style.cursor = 'zoom-in';
+    image.addEventListener('click', function () { show(i); });
+  });
+
+  btnClose.addEventListener('click', close);
+  btnPrev.addEventListener('click', function () { show(current - 1); });
+  btnNext.addEventListener('click', function () { show(current + 1); });
+
+  overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) close();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (!overlay.classList.contains('open')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') show(current - 1);
+    if (e.key === 'ArrowRight') show(current + 1);
+  });
+}());
+
+// ================================
 // CONTACT FORM
 // ================================
 (function () {

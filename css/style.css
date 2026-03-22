@@ -227,8 +227,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .card-thumbnail img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  display: block;
   transition: opacity 0.2s ease;
 }
 
@@ -531,11 +531,10 @@ textarea.form-control {
 
 .project-hero img {
   width: 100%;
-  height: 480px;
-  object-fit: cover;
+  height: auto;
+  display: block;
   border-radius: var(--radius);
   border: var(--border-style);
-  display: block;
 }
 
 .project-content {
@@ -584,6 +583,82 @@ textarea.form-control {
 .project-meta-value {
   font-size: 14px;
   color: var(--heading);
+}
+
+/* --- Project Gallery --- */
+.project-gallery {
+  padding: 0 max(40px, calc((100% - 1200px) / 2)) 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.project-gallery img {
+  width: 100%;
+  display: block;
+  border-radius: var(--radius);
+  border: var(--border-style);
+}
+
+/* --- Lightbox --- */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 500;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: var(--radius);
+  display: block;
+}
+
+.lightbox-btn {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.lightbox-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.lightbox-close {
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+}
+
+.lightbox-prev {
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox-next {
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /* ================================
@@ -659,9 +734,6 @@ textarea.form-control {
     padding: 24px 20px 0;
   }
 
-  .project-hero img {
-    height: 240px;
-  }
 
   .project-back {
     padding: 20px 20px 0;
@@ -669,5 +741,10 @@ textarea.form-control {
 
   .project-title {
     font-size: 22px;
+  }
+
+  .project-gallery {
+    grid-template-columns: 1fr;
+    padding: 0 20px 48px;
   }
 }
