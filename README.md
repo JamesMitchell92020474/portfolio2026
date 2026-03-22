@@ -20,7 +20,7 @@ portfolio2026/
 │   ├── greenworld.html           # Greenworld
 │   ├── pwm-law.html              # Peter Mitchell Law
 │   ├── step-up.html              # E3 Business Accountants — Step Up
-│   └── placeholder.html          # Placeholder for upcoming project
+│   └── claudes-gambit.html       # Claude's Gambit — AI chess game
 ├── css/
 │   └── style.css
 ├── js/
@@ -63,7 +63,7 @@ action="https://formspree.io/f/REPLACE_WITH_YOUR_ID"
 ## To do
 
 - [ ] Add real images and content for 4for40 project page
+- [ ] Add screenshots for Claude's Gambit project page
 - [ ] Add CV file and wire up Download CV button
 - [ ] Set up Formspree form ID
-- [ ] Fill placeholder (9th) project slot
 - [ ] Deploy
