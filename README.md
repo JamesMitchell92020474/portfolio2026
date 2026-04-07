@@ -18,16 +18,9 @@ portfolio2026/
 │   ├── community-brochures.html  # Southern Centre
 │   ├── cuppa-joes.html           # Cuppa Joe's
 │   ├── greenworld.html           # Greenworld
-│   ├── harbour-run.html          # Harbour Run
-│   ├── meridian.html             # Meridian Print Co.
-│   ├── pohutukawa.html           # Pōhutukawa Collective
 │   ├── pwm-law.html              # Peter Mitchell Law
-│   ├── relay.html                # Relay
-│   ├── stackwise.html            # Stackwise
 │   ├── step-up.html              # E3 Business Accountants — Step Up
-│   ├── tidal.html                # Tidal
-│   ├── claudes-gambit.html       # Claude's Gambit — AI chess game
-│   └── placeholder.html          # Placeholder template
+│   └── claudes-gambit.html       # Claude's Gambit — AI chess game
 ├── css/
 │   └── style.css
 ├── js/
