@@ -15,12 +15,19 @@ portfolio2026/
 │   ├── homerow.html              # HomeRow — Touch Typing Tutor
 │   ├── 4for40.html               # Islam Is… 4for40
 │   ├── asqs.html                 # Asset Sure Quantity Surveyors
-│   ├── community-brochures.html  # Christchurch City Council — Community Brochures
+│   ├── community-brochures.html  # Southern Centre
 │   ├── cuppa-joes.html           # Cuppa Joe's
 │   ├── greenworld.html           # Greenworld
+│   ├── harbour-run.html          # Harbour Run
+│   ├── meridian.html             # Meridian Print Co.
+│   ├── pohutukawa.html           # Pōhutukawa Collective
 │   ├── pwm-law.html              # Peter Mitchell Law
+│   ├── relay.html                # Relay
+│   ├── stackwise.html            # Stackwise
 │   ├── step-up.html              # E3 Business Accountants — Step Up
-│   └── claudes-gambit.html       # Claude's Gambit — AI chess game
+│   ├── tidal.html                # Tidal
+│   ├── claudes-gambit.html       # Claude's Gambit — AI chess game
+│   └── placeholder.html          # Placeholder template
 ├── css/
 │   └── style.css
 ├── js/
@@ -62,7 +69,7 @@ action="https://formspree.io/f/REPLACE_WITH_YOUR_ID"
 
 ## To do
 
-- [ ] Add real images and content for 4for40 project page
+- [ ] Add real images for 4for40 project page
 - [ ] Add screenshots for Claude's Gambit project page
 - [ ] Add CV file and wire up Download CV button
 - [ ] Set up Formspree form ID
