@@ -30,11 +30,11 @@ portfolio2026/
 
 ## Features
 
-- 3×3 portfolio grid on homepage
-- Individual project pages with hero image, description, meta, and image gallery
-- Lightbox image viewer with prev/next navigation and keyboard support (← → Esc)
+- 3×3 portfolio grid on homepage, each card linking to a project page
+- Project pages with image carousel (auto-advancing, thumbnail nav, pause on hover)
+- Lightbox viewer on carousel main image with prev/next and keyboard support (← → Esc)
+- Inline nav links on desktop, hamburger overlay on mobile
 - Sticky nav with scroll shadow
-- Mobile hamburger nav overlay
 - Contact form via Formspree
 
 ## Design
@@ -62,8 +62,7 @@ action="https://formspree.io/f/REPLACE_WITH_YOUR_ID"
 
 ## To do
 
-- [ ] Add real images for 4for40 project page
-- [ ] Add screenshots for Claude's Gambit project page
+- [ ] Add more images for Islam Is… 4for40 and Claude's Gambit project pages
 - [ ] Add CV file and wire up Download CV button
 - [ ] Set up Formspree form ID
 - [ ] Deploy
