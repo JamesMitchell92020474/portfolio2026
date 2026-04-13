@@ -38,25 +38,21 @@
         <span class="label-bar-text">Front-end developer &amp; designer</span>
       </div>
       <h1 class="hero-heading">Christchurch-based designer and developer, crafting considered websites and digital experiences.</h1>
+      <p class="hero-intro">A selection of work across web development, graphic design, and UI/UX.</p>
     </section>
 
     <!-- Portfolio grid -->
     <section aria-label="Portfolio">
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="print">Print</button>
+        <button class="filter-btn" data-filter="ux">UI / UX</button>
+      </div>
       <div class="portfolio-grid">
 
-        <!-- 1 — HomeRow -->
-        <a href="projects/homerow.html" class="card">
-          <div class="card-thumbnail">
-            <img src="images/HomeRow1.png" alt="HomeRow — Touch Typing Tutor">
-          </div>
-          <div class="card-body">
-            <div class="card-tag">Web app</div>
-            <div class="card-title">HomeRow — Touch Typing Tutor</div>
-          </div>
-        </a>
-
-        <!-- 2 — 4for40 -->
-        <a href="projects/4for40.html" class="card">
+        <!-- 1 — 4for40 -->
+        <a href="projects/4for40.html" class="card" data-category="web">
           <div class="card-thumbnail">
             <img src="images/IslamIs_1.png" alt="Islam Is 4for40 project">
           </div>
@@ -66,8 +62,41 @@
           </div>
         </a>
 
-        <!-- 3 — ASQS -->
-        <a href="projects/asqs.html" class="card">
+        <!-- 2 — HomeRow -->
+        <a href="projects/homerow.html" class="card" data-category="web">
+          <div class="card-thumbnail">
+            <img src="images/HomeRow1.png" alt="HomeRow — Touch Typing Tutor">
+          </div>
+          <div class="card-body">
+            <div class="card-tag">Web app</div>
+            <div class="card-title">HomeRow — Touch Typing Tutor</div>
+          </div>
+        </a>
+
+        <!-- 3 — Claude's Gambit -->
+        <a href="projects/claudes-gambit.html" class="card" data-category="web">
+          <div class="card-thumbnail">
+            <img src="images/Claudes-Gambit_1.png" alt="Claude's Gambit — chess interface">
+          </div>
+          <div class="card-body">
+            <div class="card-tag">Web app</div>
+            <div class="card-title">Claude's Gambit</div>
+          </div>
+        </a>
+
+        <!-- 4 — PWM Law -->
+        <a href="projects/pwm-law.html" class="card" data-category="web">
+          <div class="card-thumbnail">
+            <img src="images/PWMLaw-1.png" alt="PW Mitchell Law website">
+          </div>
+          <div class="card-body">
+            <div class="card-tag">Web dev</div>
+            <div class="card-title">PW Mitchell Law</div>
+          </div>
+        </a>
+
+        <!-- 5 — ASQS -->
+        <a href="projects/asqs.html" class="card" data-category="print">
           <div class="card-thumbnail">
             <img src="images/ASQS_1.png" alt="Asset Sure Quantity Surveyors">
           </div>
@@ -77,52 +106,8 @@
           </div>
         </a>
 
-        <!-- 4 — Community Brochures -->
-        <a href="projects/community-brochures.html" class="card">
-          <div class="card-thumbnail">
-            <img src="images/Community-Brochures.jpg" alt="Southern Centre community brochures">
-          </div>
-          <div class="card-body">
-            <div class="card-tag">Graphic design · Print</div>
-            <div class="card-title">Christchurch City Council — Community Brochures</div>
-          </div>
-        </a>
-
-        <!-- 5 — Cuppa Joe's -->
-        <a href="projects/cuppa-joes.html" class="card">
-          <div class="card-thumbnail">
-            <img src="images/CuppaJoes1.jpg" alt="Cuppa Joe's website">
-          </div>
-          <div class="card-body">
-            <div class="card-tag">Web dev</div>
-            <div class="card-title">Cuppa Joe's</div>
-          </div>
-        </a>
-
-        <!-- 6 — Greenworld -->
-        <a href="projects/greenworld.html" class="card">
-          <div class="card-thumbnail">
-            <img src="images/Greenworld1.png" alt="Greenworld app">
-          </div>
-          <div class="card-body">
-            <div class="card-tag">UI / UX</div>
-            <div class="card-title">Greenworld</div>
-          </div>
-        </a>
-
-        <!-- 7 — PWM Law -->
-        <a href="projects/pwm-law.html" class="card">
-          <div class="card-thumbnail">
-            <img src="images/PWMLaw-1.png" alt="Peter Mitchell Law website">
-          </div>
-          <div class="card-body">
-            <div class="card-tag">Web dev</div>
-            <div class="card-title">Peter Mitchell Law</div>
-          </div>
-        </a>
-
-        <!-- 8 — Step Up -->
-        <a href="projects/step-up.html" class="card">
+        <!-- 6 — Step Up -->
+        <a href="projects/step-up.html" class="card" data-category="print">
           <div class="card-thumbnail">
             <img src="images/Step-Up-1.png" alt="E3 Business Accountants Step Up campaign">
           </div>
@@ -132,14 +117,36 @@
           </div>
         </a>
 
-        <!-- 9 — Claude's Gambit -->
-        <a href="projects/claudes-gambit.html" class="card">
+        <!-- 7 — Community Brochures -->
+        <a href="projects/community-brochures.html" class="card" data-category="print">
           <div class="card-thumbnail">
-            <img src="images/Claudes-Gambit_1.png" alt="Claude's Gambit — chess interface">
+            <img src="images/Community-Brochures.jpg" alt="Southern Centre community brochures">
           </div>
           <div class="card-body">
-            <div class="card-tag">Web app</div>
-            <div class="card-title">Claude's Gambit</div>
+            <div class="card-tag">Graphic design · Print</div>
+            <div class="card-title">Christchurch City Council — Community Brochures</div>
+          </div>
+        </a>
+
+        <!-- 8 — Cuppa Joe's -->
+        <a href="projects/cuppa-joes.html" class="card" data-category="web">
+          <div class="card-thumbnail">
+            <img src="images/CuppaJoes1.jpg" alt="Cuppa Joe's website">
+          </div>
+          <div class="card-body">
+            <div class="card-tag">Web dev</div>
+            <div class="card-title">Cuppa Joe's</div>
+          </div>
+        </a>
+
+        <!-- 9 — Greenworld -->
+        <a href="projects/greenworld.html" class="card" data-category="ux">
+          <div class="card-thumbnail">
+            <img src="images/Greenworld1.png" alt="Greenworld app">
+          </div>
+          <div class="card-body">
+            <div class="card-tag">UI / UX</div>
+            <div class="card-title">Greenworld</div>
           </div>
         </a>
 

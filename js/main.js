@@ -1,4 +1,11 @@
 // ================================
+// PAGE FADE-IN
+// ================================
+document.addEventListener('DOMContentLoaded', function () {
+  document.body.classList.add('loaded');
+});
+
+// ================================
 // STICKY NAV
 // ================================
 (function () {
@@ -55,22 +62,34 @@
       btn.classList.add('active');
 
       var filter = btn.getAttribute('data-filter');
+      var showing = [];
 
+      // First, fade out and hide all cards
       cards.forEach(function (card) {
-        if (filter === 'all' || card.getAttribute('data-category') === filter) {
-          card.style.transition = 'opacity 0.2s ease';
-          card.style.display = 'block';
-          requestAnimationFrame(function () {
-            card.style.opacity = '1';
-          });
-        } else {
-          card.style.transition = 'opacity 0.2s ease';
-          card.style.opacity = '0';
-          setTimeout(function () {
-            card.style.display = 'none';
-          }, 200);
-        }
+        card.style.transition = 'opacity 0.15s ease, transform 0.15s ease';
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(6px)';
       });
+
+      // After fade-out, show matching cards with staggered fade-in
+      setTimeout(function () {
+        cards.forEach(function (card) {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'block';
+            showing.push(card);
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        showing.forEach(function (card, i) {
+          setTimeout(function () {
+            card.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          }, i * 50);
+        });
+      }, 150);
     });
   });
 }());
@@ -112,18 +131,22 @@
     timer = null;
   }
 
+  var userInteracted = false;
+
   thumbs.forEach(function (thumb, i) {
     thumb.addEventListener('click', function () {
+      userInteracted = true;
       stopAutoplay();
       showSlide(i);
-      startAutoplay();
     });
   });
 
   var carouselEl = document.querySelector('.project-carousel');
   if (carouselEl) {
     carouselEl.addEventListener('mouseenter', stopAutoplay);
-    carouselEl.addEventListener('mouseleave', startAutoplay);
+    carouselEl.addEventListener('mouseleave', function () {
+      if (!userInteracted) startAutoplay();
+    });
   }
 
   startAutoplay();

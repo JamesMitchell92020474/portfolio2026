@@ -12,15 +12,15 @@ portfolio2026/
 ├── about.html                    # Bio, skills, and education
 ├── contact.html                  # Contact form and direct links
 ├── projects/
-│   ├── homerow.html              # HomeRow — Touch Typing Tutor
 │   ├── 4for40.html               # Islam Is… 4for40
+│   ├── homerow.html              # HomeRow — Touch Typing Tutor
+│   ├── claudes-gambit.html       # Claude's Gambit — AI chess game
+│   ├── pwm-law.html              # PW Mitchell Law
 │   ├── asqs.html                 # Asset Sure Quantity Surveyors
-│   ├── community-brochures.html  # Southern Centre
-│   ├── cuppa-joes.html           # Cuppa Joe's
-│   ├── greenworld.html           # Greenworld
-│   ├── pwm-law.html              # Peter Mitchell Law
 │   ├── step-up.html              # E3 Business Accountants — Step Up
-│   └── claudes-gambit.html       # Claude's Gambit — AI chess game
+│   ├── community-brochures.html  # Christchurch City Council — Community Brochures
+│   ├── cuppa-joes.html           # Cuppa Joe's
+│   └── greenworld.html           # Greenworld
 ├── css/
 │   └── style.css
 ├── js/
@@ -31,7 +31,10 @@ portfolio2026/
 ## Features
 
 - 3×3 portfolio grid on homepage, each card linking to a project page
-- Project pages with image carousel (auto-advancing, thumbnail nav, pause on hover)
+- Filter buttons on homepage (All / Web / Print / UI/UX) with staggered fade-in animation
+- Short intro line below hero heading
+- Page fade-in on load across all pages
+- Project pages with image carousel (auto-advancing, thumbnail nav, pause on hover, stops after manual interaction)
 - Lightbox viewer on carousel main image with prev/next and keyboard support (← → Esc)
 - Inline nav links on desktop, hamburger overlay on mobile
 - Sticky nav with scroll shadow
@@ -62,7 +65,7 @@ action="https://formspree.io/f/REPLACE_WITH_YOUR_ID"
 
 ## To do
 
-- [ ] Add more images for Islam Is… 4for40 and Claude's Gambit project pages
+- [ ] Add more images for Islam Is… 4for40 project page
 - [ ] Add CV file and wire up Download CV button
 - [ ] Set up Formspree form ID
 - [ ] Deploy
