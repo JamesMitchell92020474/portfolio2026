@@ -51,15 +51,6 @@ document.addEventListener('DOMContentLoaded', function () {
   var overlay = document.querySelector('.nav-overlay');
   if (!hamburger || !overlay) return;
 
-  // Set active link for current page (desktop nav + mobile overlay)
-  var currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-links a, .nav-overlay a').forEach(function (link) {
-    var href = link.getAttribute('href').split('/').pop();
-    if (href === currentPage) {
-      link.classList.add('active');
-    }
-  });
-
   hamburger.addEventListener('click', function () {
     overlay.classList.toggle('open');
   });
@@ -69,6 +60,39 @@ document.addEventListener('DOMContentLoaded', function () {
       overlay.classList.remove('open');
     });
   });
+}());
+
+// ================================
+// SCROLL-BASED NAV ACTIVE STATE
+// ================================
+(function () {
+  var sections = ['work', 'about', 'contact']
+    .map(function (id) { return document.getElementById(id); })
+    .filter(Boolean);
+  if (!sections.length) return;
+
+  var navLinks = document.querySelectorAll('.nav-links a, .nav-overlay a');
+
+  function update() {
+    var atBottom = window.scrollY + window.innerHeight >= document.body.offsetHeight - 50;
+    var active = null;
+    if (atBottom) {
+      active = 'contact';
+    } else {
+      var triggerY = window.scrollY + window.innerHeight * 0.25;
+      sections.forEach(function (section) {
+        if (section.offsetTop <= triggerY) {
+          active = section.id;
+        }
+      });
+    }
+    navLinks.forEach(function (link) {
+      link.classList.toggle('active', active !== null && link.getAttribute('href') === '#' + active);
+    });
+  }
+
+  window.addEventListener('scroll', update, { passive: true });
+  update();
 }());
 
 // ================================
@@ -255,6 +279,7 @@ document.addEventListener('DOMContentLoaded', function () {
 (function () {
   var form = document.getElementById('contact-form');
   var successMsg = document.querySelector('.form-success');
+  var errorMsg = document.querySelector('.form-error');
   if (!form) return;
 
   form.addEventListener('submit', function (e) {
@@ -263,6 +288,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var submitBtn = form.querySelector('button[type="submit"]');
     submitBtn.disabled = true;
     submitBtn.textContent = 'Sending\u2026';
+    if (errorMsg) errorMsg.style.display = 'none';
 
     fetch(form.action, {
       method: 'POST',
@@ -272,19 +298,17 @@ document.addEventListener('DOMContentLoaded', function () {
       .then(function (res) {
         if (res.ok) {
           form.style.display = 'none';
-          if (successMsg) {
-            successMsg.style.display = 'block';
-          }
+          if (successMsg) successMsg.style.display = 'block';
         } else {
           submitBtn.disabled = false;
           submitBtn.textContent = 'Send message';
-          alert('Something went wrong. Please try again or email me directly.');
+          if (errorMsg) errorMsg.style.display = 'block';
         }
       })
       .catch(function () {
         submitBtn.disabled = false;
         submitBtn.textContent = 'Send message';
-        alert('Something went wrong. Please try again or email me directly.');
+        if (errorMsg) errorMsg.style.display = 'block';
       });
   });
 }());

@@ -46,6 +46,7 @@ button {
   --bg: #FAF8F3;
   --surface: #FAF8F3;
   --accent: #00b7b5;
+  --logo: #018790;
   --heading: #1C1917;
   --body: #4A4540;
   --muted: rgba(74, 69, 64, 0.55);
@@ -133,11 +134,14 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: space-between;
   padding: 0 max(40px, calc((100% - 1200px) / 2));
-  transition: box-shadow 0.2s ease, height 0.3s ease;
+  transition: box-shadow 0.2s ease, height 0.3s ease, background 0.2s ease;
 }
 
 .nav.scrolled {
   height: 60px;
+  background: rgba(250, 248, 243, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06);
 }
 
@@ -167,9 +171,14 @@ h1, h2, h3, h4, h5, h6 {
   transition: color 0.2s ease;
 }
 
-.nav-links a:hover,
+.nav-links a:hover {
+  color: var(--logo);
+}
+
 .nav-links a.active {
-  color: var(--accent);
+  color: var(--logo);
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .hamburger {
@@ -216,9 +225,14 @@ h1, h2, h3, h4, h5, h6 {
   transition: color 0.2s ease;
 }
 
-.nav-overlay a:hover,
+.nav-overlay a:hover {
+  color: var(--logo);
+}
+
 .nav-overlay a.active {
-  color: var(--accent);
+  color: var(--logo);
+  text-decoration: underline;
+  text-underline-offset: 6px;
 }
 
 /* --- Left-bar label --- */
@@ -299,7 +313,7 @@ h1, h2, h3, h4, h5, h6 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  padding: 8px max(40px, calc((100% - 1200px) / 2)) 40px;
+  padding: 8px max(40px, calc((100% - 1200px) / 2)) 80px;
   grid-auto-flow: dense;
 }
 
@@ -340,21 +354,39 @@ h1, h2, h3, h4, h5, h6 {
 .footer {
   padding: 32px max(40px, calc((100% - 1200px) / 2));
   background: #005461;
-  border-top: none;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  gap: 32px;
+  gap: 16px;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
 }
 
 .footer a {
-  font-size: 12px;
   color: rgba(255, 255, 255, 0.55);
   transition: color 0.2s ease;
+  font-size: 12px;
+  display: flex;
+}
+
+.footer svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
 
 .footer a:hover {
   color: #ffffff;
+}
+
+.footer-copy {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.35);
+  margin: 0;
 }
 
 /* --- Skill Pills --- */
@@ -454,7 +486,8 @@ textarea.form-control {
   min-height: 120px;
 }
 
-.form-success {
+.form-success,
+.form-error {
   display: none;
   padding: 32px 0;
   color: var(--body);
@@ -606,6 +639,14 @@ textarea.form-control {
 
 .section-contact .form-success {
   color: rgba(255, 255, 255, 0.85);
+}
+
+.section-contact .form-error {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.section-contact .form-error a {
+  color: #ffffff;
 }
 
 /* --- About section --- */

@@ -31,20 +31,23 @@ portfolio2026/
 - Single-page layout — hero, portfolio grid, about, and contact all on index.html
 - Section backgrounds graduate from warm cream → light teal → teal → deep teal footer
 - 3×3 portfolio grid with filter buttons (All / Web / Print / UI/UX) and staggered fade-in animation
-- Nav shrinks on scroll — logo starts large, compresses to compact size
+- Nav shrinks on scroll — logo starts large, compresses to compact size; frosted glass background on scroll
+- Scroll-based active nav state — highlights current section as you scroll, with underline indicator
 - Scroll-to-top button — appears after 400px scroll, fixed bottom-right
 - Page fade-in on load across all pages
 - Project pages with image carousel (auto-advancing, thumbnail nav, stops after manual interaction)
 - Lightbox viewer on carousel main image with prev/next and keyboard support (← → Esc)
 - Inline nav links on desktop (Work / About / Contact), hamburger overlay on mobile
 - Sticky nav with scroll shadow
-- Contact form via Formspree
+- Contact form via Formspree with honeypot spam protection and inline error handling
+- Footer with SVG icons (GitHub, Email) and copyright line
 
 ## Design
 
-- Colour palette: `#FAF8F3` background, `#00b7b5` accent, `#018790` / `#005461` section/footer teal
+- Colour palette: `#FAF8F3` background, `#00b7b5` accent, `#018790` logo/hover/active, `#005461` footer teal
 - Typography: Jost (Google Fonts, weights 300/400/500), 18px base, 16px project descriptions
 - Logo: uppercase, weight 400, letter-spacing 0.18em, `#018790` teal
+- Nav hover and active states use `--logo` colour (`#018790`); active adds underline with 4px offset
 - Content constrained to 1200px max-width
 - Fully responsive — single column below 768px, hamburger nav on mobile
 
@@ -58,15 +61,11 @@ npx serve .
 
 ## Contact form
 
-The form uses [Formspree](https://formspree.io). Replace the placeholder in `index.html` with your actual form ID:
-
-```html
-action="https://formspree.io/f/REPLACE_WITH_YOUR_ID"
-```
+The form uses [Formspree](https://formspree.io) — endpoint is configured in `index.html`. Includes a honeypot field (`_gotcha`) for basic bot protection. On failure, an inline error message with a mailto link is shown in place of a browser alert.
 
 ## To do
 
 - [ ] Add more images for Islam Is… 4for40 project page
 - [ ] Add CV file and wire up Download CV button
-- [ ] Set up Formspree form ID
+- [ ] Add LinkedIn SVG icon to footer
 - [ ] Deploy
