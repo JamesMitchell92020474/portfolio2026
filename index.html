@@ -11,10 +11,11 @@
 
   <!-- Navigation -->
   <nav class="nav">
-    <a href="index.html" class="nav-logo">James Mitchell.</a>
+    <a href="index.html" class="nav-logo">James Mitchell</a>
     <div class="nav-links">
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </div>
     <button class="hamburger" aria-label="Open menu">
       <span></span>
@@ -25,24 +26,20 @@
   <!-- Mobile nav overlay -->
   <div class="nav-overlay" role="dialog" aria-label="Navigation menu">
     <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
   </div>
 
   <main>
 
     <!-- Hero -->
     <section class="hero">
-      <div class="label-bar">
-        <div class="label-bar-indicator"></div>
-        <span class="label-bar-text">Front-end developer &amp; designer</span>
-      </div>
       <h1 class="hero-heading">Christchurch-based designer and developer, crafting considered websites and digital experiences.</h1>
-      <p class="hero-intro">A selection of work across web development, graphic design, and UI/UX.</p>
     </section>
 
     <!-- Portfolio grid -->
-    <section aria-label="Portfolio">
+    <section id="work" class="section-work" aria-label="Portfolio">
       <div class="filter-bar">
         <button class="filter-btn active" data-filter="all">All</button>
         <button class="filter-btn" data-filter="web">Web</button>
@@ -149,6 +146,149 @@
             <div class="card-title">Greenworld</div>
           </div>
         </a>
+
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section-about">
+      <div class="about-layout">
+
+        <!-- Left column -->
+        <div class="about-left">
+          <div class="label-bar">
+            <div class="label-bar-indicator"></div>
+            <span class="label-bar-text">About</span>
+          </div>
+          <h2 class="page-heading">I design things and build them.</h2>
+
+          <p>I started out in graphic design — brand work, print production, and the kind of detail-obsessed discipline that comes with pre-press. Over time I moved into IT systems and administration, and then into front-end development. The combination makes me more useful, not harder to categorise.</p>
+
+          <p>On the design side I have extensive experience with Adobe CC across InDesign, Photoshop, and Illustrator. I've worked on brand design, print production, and pre-press for small businesses and in-house teams — the full lifecycle from brief to finished file.</p>
+
+          <p>In development I work with HTML, CSS, and JavaScript. I have two years of experience on the JADE platform including bug fixing, feature development, unit testing, peer review, and documentation, alongside systems administration experience managing users, CRM integrations, and internal tooling.</p>
+
+          <p>I'm currently looking for permanent full-time roles in front-end development, UI/UX, or IT — in Christchurch or remotely.</p>
+
+          <a href="#" class="btn-accent">Download CV</a>
+        </div>
+
+        <!-- Right column -->
+        <div class="about-right">
+
+          <div class="skill-group">
+            <div class="skill-group-label">Development</div>
+            <div class="skill-pills">
+              <span class="pill">HTML / CSS / JS</span>
+              <span class="pill">Front-end dev</span>
+              <span class="pill">UI / UX</span>
+              <span class="pill">GitHub</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-label">Design</div>
+            <div class="skill-pills">
+              <span class="pill">Adobe CC</span>
+              <span class="pill">Brand design</span>
+              <span class="pill">Print production</span>
+              <span class="pill">Pre-press</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-label">Systems</div>
+            <div class="skill-pills">
+              <span class="pill">Systems admin</span>
+              <span class="pill">CRM integration</span>
+              <span class="pill">User management</span>
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div class="education-section">
+            <div class="label-bar">
+              <div class="label-bar-indicator"></div>
+              <span class="label-bar-text">Education</span>
+            </div>
+            <ul class="education-list">
+              <li class="education-item">
+                <span class="education-title">Microcredential in Generative AI</span>
+                <span class="education-meta">Open Polytechnic, 2025</span>
+              </li>
+              <li class="education-item">
+                <span class="education-title">Diploma of Software Development</span>
+                <span class="education-meta">Whitecliffe College, 2019–2020</span>
+              </li>
+              <li class="education-item">
+                <span class="education-title">Diploma of Interactive Design</span>
+                <span class="education-meta">Yoobee, 2013–2014</span>
+              </li>
+              <li class="education-item">
+                <span class="education-title">Diploma of Computer Graphic Design</span>
+                <span class="education-meta">Natcoll, 2012</span>
+              </li>
+              <li class="education-item">
+                <span class="education-title">Certificate in Design Technology</span>
+                <span class="education-meta">Natcoll, 2011</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section-contact">
+      <div class="contact-layout">
+
+        <!-- Left column -->
+        <div class="contact-left">
+          <div class="label-bar">
+            <div class="label-bar-indicator"></div>
+            <span class="label-bar-text">Contact</span>
+          </div>
+          <h2 class="page-heading">Get in touch.</h2>
+
+          <p>I'm currently looking for permanent full-time opportunities in front-end development, UI/UX, or IT. If you'd like to talk, fill in the form or reach out directly.</p>
+
+          <div class="contact-links">
+            <a href="mailto:hello@jamesmitchell.co.nz">hello@jamesmitchell.co.nz</a>
+            <a href="https://linkedin.com/in/jamesmitchell7/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/JamesMitchell92020474" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Right column -->
+        <div class="contact-right">
+
+          <p class="form-success">Thanks — I'll be in touch soon.</p>
+
+          <!-- Sign up at formspree.io and replace REPLACE_WITH_YOUR_ID with your form ID -->
+          <form id="contact-form" action="https://formspree.io/f/REPLACE_WITH_YOUR_ID" method="POST">
+
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input class="form-control" type="text" id="name" name="name" required autocomplete="name">
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input class="form-control" type="email" id="email" name="email" required autocomplete="email">
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-accent">Send message</button>
+
+          </form>
+
+        </div>
 
       </div>
     </section>
