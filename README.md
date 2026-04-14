@@ -67,5 +67,4 @@ The form uses [Formspree](https://formspree.io) — endpoint is configured in `i
 
 - [ ] Add more images for Islam Is… 4for40 project page
 - [ ] Add CV file and wire up Download CV button
-- [ ] Add LinkedIn SVG icon to footer
 - [ ] Deploy
