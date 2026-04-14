@@ -40,7 +40,8 @@ portfolio2026/
 - Inline nav links on desktop (Work / About / Contact), hamburger overlay on mobile
 - Sticky nav with scroll shadow
 - Contact form via Formspree with honeypot spam protection and inline error handling
-- Footer with SVG icons (GitHub, Email) and copyright line
+- Footer with SVG icons (Email, LinkedIn, GitHub) and copyright line — consistent across all pages
+- Favicon (all sizes including apple-touch-icon) in project root
 
 ## Design
 
