@@ -41,7 +41,7 @@ portfolio2026/
 - Sticky nav with scroll shadow
 - Contact form via Formspree with honeypot spam protection and inline error handling
 - Footer with SVG icons (Email, LinkedIn, GitHub) and copyright line — consistent across all pages
-- Favicon (all sizes including apple-touch-icon) in project root
+- Favicon links wired up in all HTML files — favicon files (`favicon-32x32.png`, `favicon-16x16.png`, `apple-touch-icon.png`, `site.webmanifest`) not yet added to repo
 
 ## Design
 
@@ -66,6 +66,7 @@ The form uses [Formspree](https://formspree.io) — endpoint is configured in `i
 
 ## To do
 
+- [ ] Add favicon files to project root (`favicon-32x32.png`, `favicon-16x16.png`, `apple-touch-icon.png`, `site.webmanifest`)
 - [ ] Add more images for Islam Is… 4for40 project page
 - [ ] Add CV file and wire up Download CV button
 - [ ] Deploy
